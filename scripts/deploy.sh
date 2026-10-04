@@ -20,9 +20,9 @@ npm run build
 git push "ssh://${deploy_host}${deploy_repo}" HEAD:main
 
 ssh "$deploy_host" "install -d -m 0755 '${web_root}/releases/${release}'"
-rsync -az --chmod=D755,F644 dist/ "${deploy_host}:${web_root}/releases/${release}/"
+rsync -az dist/ "${deploy_host}:${web_root}/releases/${release}/"
 
 # Switch the served release atomically. Existing releases remain for rollback.
-ssh "$deploy_host" "ln -s 'releases/${release}' '${web_root}/.current-${release}' && mv -Tf '${web_root}/.current-${release}' '${web_root}/current'"
+ssh "$deploy_host" "chmod -R u=rwX,go=rX '${web_root}/releases/${release}' && ln -s 'releases/${release}' '${web_root}/.current-${release}' && mv -Tf '${web_root}/.current-${release}' '${web_root}/current'"
 
 printf 'Deployed release %s to https://fish.infiniter.tech\n' "$release"
