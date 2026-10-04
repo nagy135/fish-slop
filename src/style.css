@@ -1,0 +1,2117 @@
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #e6eeea;
+  background: #0e2225;
+  font-synthesis: none;
+  --mint: #c5e4bb;
+  --muted: #8daca8;
+  --border: #ffffff12;
+  --coral: #edb89c;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-width: 360px;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+button {
+  color: inherit;
+  border: 0;
+}
+button:disabled {
+  cursor: not-allowed;
+}
+button:focus-visible,
+a:focus-visible,
+#world:focus-visible {
+  outline: 2px solid var(--mint);
+  outline-offset: 4px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button:hover {
+  filter: brightness(1.08);
+}
+button:active {
+  transform: translateY(1px);
+}
+.icon {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+.hidden {
+  display: none !important;
+}
+kbd {
+  font-family: inherit;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 22px;
+  padding: 0 5px;
+  border: 1px solid #c5dbd325;
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  background: #ffffff06;
+  color: #aec0b9;
+}
+.site-header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  max-width: 1600px;
+  margin: auto;
+  padding: 0 46px;
+  gap: 66px;
+  border-bottom: 1px solid var(--border);
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Outfit", sans-serif;
+  font-size: 26px;
+  letter-spacing: -1px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--mint);
+  color: #193c36;
+  border-radius: 13px;
+  transform: rotate(-7deg);
+}
+.brand-mark .icon {
+  width: 27px;
+  height: 27px;
+  transform: rotate(7deg);
+  stroke-width: 1.9;
+}
+.brand-dot {
+  color: var(--coral);
+}
+.main-nav {
+  display: flex;
+  height: 100%;
+  gap: 32px;
+}
+.nav-link {
+  position: relative;
+  padding: 0;
+  background: none;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 550;
+}
+.nav-link.active {
+  color: #eaf1e9;
+}
+.nav-link.active:after {
+  content: "";
+  height: 2px;
+  background: var(--mint);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.nav-tag {
+  font-size: 9px;
+  color: #9fb3a9;
+  background: #ffffff0c;
+  padding: 2px 5px;
+  border-radius: 4px;
+  margin-left: 5px;
+}
+.header-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.help-button {
+  background: none;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  color: #bacbc5;
+}
+.help-button .icon {
+  width: 17px;
+  height: 17px;
+}
+.header-divider {
+  width: 1px;
+  height: 21px;
+  background: var(--border);
+}
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  color: #b1cdc4;
+  width: 30px;
+  height: 32px;
+  border-radius: 7px;
+}
+.page {
+  max-width: 1600px;
+  padding: 0 46px;
+  margin: auto;
+}
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 31px 0 28px;
+  gap: 20px;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  font-family: "Outfit", sans-serif;
+}
+h1 {
+  font-size: 38px;
+  letter-spacing: -1.2px;
+  line-height: 1.18;
+  font-weight: 550;
+}
+h1 > span,
+.dialog-content h2 > span {
+  color: var(--coral);
+}
+.player-resources {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+.keeper-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.keeper-badge > .icon {
+  color: #bed6a4;
+  width: 24px;
+  height: 24px;
+}
+.keeper-badge strong {
+  font-size: 12px;
+  font-weight: 550;
+  color: #d5dfd5;
+}
+.xp-track {
+  width: 67px;
+  height: 3px;
+  border-radius: 3px;
+  background: #ffffff13;
+  margin-top: 7px;
+  overflow: hidden;
+}
+.xp-track i {
+  display: block;
+  height: 100%;
+  background: #c5dda9;
+}
+.pearl-badge {
+  background: #213739;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 17px;
+  border: 1px solid #ffffff09;
+  border-radius: 12px;
+  min-width: 103px;
+}
+.pearl-badge strong {
+  font-size: 20px;
+  line-height: 1;
+  font-family: "Outfit";
+  font-weight: 500;
+}
+.pearl-orb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 33% 27%, #fff5d4, #e6d6a4 45%, #9ca68b);
+  box-shadow:
+    inset -2px -2px 4px #777a4433,
+    0 0 16px #f5e5a211;
+  position: relative;
+}
+.pearl-orb:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 3px;
+  background: #fff7dc;
+  top: 4px;
+  left: 4px;
+  border-radius: 50%;
+  transform: rotate(-30deg);
+}
+.game-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 24px;
+}
+.aquarium {
+  min-width: 0;
+}
+.tank-stage {
+  height: clamp(430px, calc(100vh - 290px), 740px);
+  position: relative;
+  overflow: hidden;
+  border-radius: 17px 17px 0 0;
+  background: #1f4849;
+  border: 1px solid #5eaaa427;
+  border-bottom: 0;
+}
+#world {
+  position: absolute;
+  inset: 0;
+  outline: none;
+  touch-action: none;
+  cursor: crosshair;
+}
+#world canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#world:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 40%, transparent 40%, #072a304d 100%),
+    linear-gradient(
+      to bottom,
+      #052c3020,
+      transparent 25%,
+      transparent 78%,
+      #0a292640
+    );
+}
+.tank-top {
+  position: absolute;
+  top: 24px;
+  left: 25px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+.tank-location {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+}
+.location-icon {
+  color: #accab7;
+}
+.location-icon .icon {
+  width: 24px;
+  height: 24px;
+}
+.tank-location h2 {
+  font-size: 19px;
+  letter-spacing: -0.2px;
+  font-weight: 550;
+  color: #e7f0de;
+}
+.tank-status {
+  margin-left: 12px;
+  padding: 6px 9px;
+  background: #153b3575;
+  border: 1px solid #bdd3b020;
+  border-radius: 30px;
+  color: #c6dac2;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  backdrop-filter: blur(10px);
+}
+.tank-status i {
+  width: 5px;
+  height: 5px;
+  background: #b8d9ab;
+  border-radius: 50%;
+}
+.tank-status.danger {
+  background: #8a474450;
+  color: #ffcdba;
+  border-color: #ffcdb533;
+}
+.tank-status.danger i {
+  background: #fda19b;
+}
+.view-actions {
+  display: flex;
+  gap: 7px;
+  pointer-events: auto;
+}
+.view-actions button {
+  background: #133b3766;
+  border: 1px solid #c5d4b515;
+  width: 33px;
+  height: 33px;
+}
+.view-actions .icon {
+  width: 16px;
+  height: 16px;
+}
+.tank-bottom {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+.sub-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #173b3680;
+  border: 1px solid #c4d9b71a;
+  padding: 10px 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+.sub-icon {
+  color: #dbcc9e;
+  display: flex;
+  align-items: center;
+}
+.sub-icon .icon {
+  width: 29px;
+  height: 26px;
+}
+.sub-name {
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  font-weight: 650;
+  color: #e3e4c2;
+}
+.hull-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+.hull-row > span {
+  font-size: 9px;
+  color: #adc1a7;
+}
+.hull-track {
+  width: 74px;
+  height: 4px;
+  background: #c3d5af20;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.hull-track i {
+  display: block;
+  height: 100%;
+  background: #c6d5a1;
+  transition: width 0.3s;
+}
+.hull-track i.low {
+  background: #ef9f86;
+}
+.tutorial-note {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-40%);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: #214a40a8;
+  color: #d2e5cb;
+  border: 1px solid #c4ddc220;
+  backdrop-filter: blur(12px);
+  border-radius: 9px;
+  padding: 9px 12px;
+  font-size: 11px;
+}
+.tutorial-note kbd {
+  color: #d8e5c3;
+}
+.tutorial-note button {
+  background: none;
+  color: #aec6b4;
+  margin-left: 15px;
+  padding: 0;
+  display: flex;
+}
+.tutorial-note button .icon {
+  width: 13px;
+  height: 13px;
+}
+.tank-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  background: #1b3334;
+  border: 1px solid #ffffff0a;
+  border-top: 1px solid #93b9a922;
+  padding: 17px 20px;
+  border-radius: 0 0 15px 15px;
+}
+.action-buttons {
+  display: flex;
+  gap: 11px;
+}
+.action-button {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 9px;
+  font-weight: 600;
+  font-size: 13px;
+  transition:
+    background 0.2s,
+    transform 0.2s;
+}
+.action-button > .icon {
+  width: 22px;
+  height: 22px;
+}
+.feed-button {
+  background: var(--coral);
+  color: #3d3a2d;
+}
+.feed-button small {
+  font-size: 10px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  opacity: 0.8;
+  margin-left: 7px;
+}
+.feed-button kbd {
+  color: #635442;
+  background: #6148350b;
+  border-color: #6a513328;
+}
+.feed-button .mini-pearl {
+  width: 8px;
+  height: 8px;
+  border: 1px solid #5a584537;
+  background: #ece0b2;
+}
+.defend-button {
+  background: #ffffff06;
+  border: 1px solid #adc2b120;
+  color: #d1ddcd;
+}
+.defend-button > .icon {
+  color: #bfceaf;
+}
+.action-button kbd {
+  font-size: 9px;
+  margin-left: 5px;
+  height: 22px;
+}
+.pressed {
+  transform: scale(0.96) !important;
+}
+.toolbar-right {
+  display: flex;
+  gap: 21px;
+  align-items: center;
+}
+.movement-hint {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  color: #9bafa6;
+}
+.key-cluster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+.key-cluster > span {
+  display: flex;
+  gap: 3px;
+}
+.key-cluster kbd {
+  width: 19px;
+  height: 19px;
+  font-size: 9px;
+  min-width: 19px;
+}
+.pause-button {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: #ffffff05;
+  border: 1px solid #afc5b319;
+  color: #b3c8b6;
+}
+.pause-button > .icon {
+  width: 16px;
+  height: 16px;
+}
+.aquarium-footer {
+  padding: 17px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #8da9a0;
+  gap: 15px;
+}
+.aquarium-footer > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.aquarium-footer kbd {
+  font-size: 8px;
+  height: 18px;
+  min-width: 17px;
+}
+.aquarium-footer > span kbd:nth-child(3) {
+  margin-left: 10px;
+}
+.aquarium-footer button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  color: #aac3b4;
+  font-size: 11px;
+  padding: 0;
+}
+.aquarium-footer button .icon {
+  width: 14px;
+  height: 14px;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.reef-stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 18px 12px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: #ffffff04;
+  height: 74px;
+}
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.stat-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: #ffffff05;
+}
+.fish-symbol {
+  color: #b5d1b1;
+}
+.happy-symbol {
+  color: #d4aa96;
+}
+.stat-item strong {
+  font-family: "Outfit";
+  font-size: 22px;
+  font-weight: 500;
+  display: block;
+}
+.stat-item strong span {
+  font-size: 13px;
+  color: #8ca89d;
+  margin-left: 2px;
+}
+.stats-divider {
+  height: 25px;
+  width: 1px;
+  background: var(--border);
+  align-self: center;
+}
+.shop {
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: #152c2e;
+  overflow: hidden;
+}
+.shop-heading {
+  padding: 22px 20px 18px;
+}
+.shop-heading h2 {
+  font-size: 22px;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+}
+.shop-heading h2 > span {
+  color: #a0b49e;
+  float: right;
+  margin-left: 90px;
+  font-family: serif;
+  font-size: 23px;
+}
+.shop-tabs {
+  display: flex;
+  padding: 0 19px;
+  gap: 19px;
+  border-bottom: 1px solid var(--border);
+}
+.shop-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  flex: 1;
+  background: none;
+  padding: 0 0 13px;
+  color: #8eaaa3;
+  position: relative;
+  font-size: 12px;
+  font-weight: 500;
+}
+.shop-tab .icon {
+  width: 16px;
+  height: 16px;
+}
+.shop-tab.active {
+  color: #d0e3c5;
+}
+.shop-tab.active:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  height: 2px;
+  background: var(--mint);
+  left: 0;
+  right: 0;
+}
+.shop-items {
+  padding: 8px 14px 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.fish-card {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  min-height: 91px;
+}
+.fish-card:last-child {
+  border-bottom: 0;
+}
+.fish-portrait {
+  width: 72px;
+  height: 61px;
+  border-radius: 9px;
+  background:
+    radial-gradient(
+      ellipse at 50% 80%,
+      color-mix(in srgb, var(--fish-color) 15%, transparent),
+      transparent 80%
+    ),
+    #ffffff04;
+  position: relative;
+  flex-shrink: 0;
+}
+.fish-portrait img {
+  width: 95px;
+  height: 66px;
+  object-fit: contain;
+  position: absolute;
+  top: -5px;
+  left: -13px;
+  filter: drop-shadow(0 8px 4px #061c2340);
+}
+.portrait-dot {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 4px;
+  height: 4px;
+  background: var(--fish-color);
+  border-radius: 50%;
+  opacity: 0.8;
+}
+.fish-info {
+  flex: 1;
+  min-width: 0;
+}
+.fish-info h3 {
+  font-size: 14px;
+  font-weight: 450;
+  letter-spacing: -0.15px;
+  white-space: nowrap;
+  color: #e3e9dc;
+}
+.buy-button {
+  background: #263e3b;
+  border: 1px solid #bad4b01a;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 550;
+  min-width: 53px;
+  height: 30px;
+  color: #d5e5be;
+  transition: background 0.2s;
+}
+.buy-button:hover:not(:disabled) {
+  background: #c5e4bb;
+  color: #244336;
+}
+.buy-button:disabled {
+  opacity: 0.35;
+}
+.mini-pearl {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 25%, #fff4ce, #b9b78d);
+  flex-shrink: 0;
+}
+.buy-button .icon {
+  width: 14px;
+  height: 14px;
+}
+.fish-label {
+  font-size: 8px;
+  letter-spacing: 0.7px;
+  color: #8baca0;
+  display: block;
+  margin-bottom: 4px;
+}
+.fish-income {
+  display: block;
+  color: #91a99c;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.upgrade-portrait {
+  width: 45px;
+  height: 52px;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--fish-color) 9%, transparent);
+  color: var(--fish-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.upgrade-portrait .icon {
+  width: 24px;
+  height: 24px;
+}
+.upgrade-card {
+  min-height: 111px;
+  gap: 9px;
+}
+.upgrade-card .fish-info h3 {
+  font-size: 13px;
+}
+.upgrade-card .buy-button {
+  min-width: 47px;
+  font-size: 10px;
+}
+.mission-card {
+  border: 1px solid #bdcf9e22;
+  border-radius: 13px;
+  padding: 18px 18px 20px;
+  background: linear-gradient(115deg, #b5c1940c, #b5c19403);
+  margin-top: auto;
+}
+.mission-top {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 13px;
+}
+.mission-icon {
+  color: #bfcc9a;
+}
+.mission-icon .icon {
+  width: 16px;
+  height: 16px;
+}
+.overline {
+  font-size: 8px;
+  letter-spacing: 1.1px;
+  color: #a1b49b;
+  font-weight: 600;
+}
+.mission-reward {
+  margin-left: auto;
+  font-size: 11px;
+  color: #d4dbb4;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.mission-card h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+}
+.mission-description {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 11px;
+}
+.mission-description strong {
+  font-size: 10px;
+  font-weight: 500;
+  color: #bdd0a4;
+  margin-left: auto;
+}
+.mission-track {
+  height: 4px;
+  border-radius: 4px;
+  background: #a4ba981a;
+  margin-top: 9px;
+  overflow: hidden;
+}
+.mission-track i {
+  height: 100%;
+  display: block;
+  background: #bfcf9f;
+  transition: width 0.4s;
+}
+.page-footer {
+  padding: 5px 1px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #668881;
+  font-size: 9px;
+}
+.page-footer > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.page-footer .icon {
+  width: 12px;
+  height: 12px;
+}
+.page-footer button {
+  padding: 0;
+  background: none;
+  font-size: 10px;
+  color: #829e95;
+}
+.page-footer button .icon {
+  margin-left: 5px;
+}
+.wave-warning {
+  position: absolute;
+  top: 82px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 11px 16px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #e3a99444;
+  border-radius: 9px;
+  background: #583f39d9;
+  backdrop-filter: blur(10px);
+  color: #f5d3b6;
+  font-size: 11px;
+  white-space: nowrap;
+  box-shadow: 0 5px 25px #112f3433;
+}
+.wave-warning .icon {
+  width: 18px;
+  height: 18px;
+}
+.wave-warning strong {
+  font-weight: 450;
+  margin-left: 7px;
+  color: #d7b6a0;
+}
+.floating-labels {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.floating-text {
+  position: absolute;
+  color: #e6efb6;
+  font-family: "Outfit";
+  font-size: 16px;
+  font-weight: 600;
+  text-shadow: 0 1px 8px #153a31;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+.floating-text.special {
+  font-size: 12px;
+  color: #ffdcc0;
+}
+.pause-overlay,
+.gameover-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #102f30be;
+  backdrop-filter: blur(8px);
+}
+.pause-overlay > span,
+.gameover-overlay > span {
+  height: 58px;
+  width: 58px;
+  background: #adc6a212;
+  border: 1px solid #c5e4bb30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--mint);
+  margin-bottom: 20px;
+}
+.pause-overlay h2,
+.gameover-overlay h2 {
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+.pause-overlay p,
+.gameover-overlay p {
+  font-size: 12px;
+  color: #b5cabc;
+  margin: 12px 20px 25px;
+  text-align: center;
+}
+.primary-button,
+.secondary-button {
+  padding: 13px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 550;
+  background: var(--mint);
+  color: #2e4e41;
+}
+.primary-button .icon {
+  width: 17px;
+  height: 17px;
+}
+.secondary-button {
+  background: #ffffff07;
+  color: #b3c7b9;
+  border: 1px solid var(--border);
+}
+.toast-stack {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+  max-width: calc(100% - 30px);
+}
+.toast {
+  padding: 13px 18px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 11px;
+  border: 1px solid #b5d6ae35;
+  box-shadow: 0 7px 40px #001c2550;
+  background: #274b40f5;
+  color: #dcecc9;
+  font-size: 12px;
+  animation: toast-in 0.25s ease-out;
+}
+.toast .icon {
+  width: 18px;
+  height: 18px;
+}
+.toast.leaving {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+dialog {
+  width: min(660px, calc(100vw - 32px));
+  max-height: 90vh;
+  padding: 27px;
+  border: 1px solid #98bba740;
+  border-radius: 18px;
+  background: #173134;
+  color: #e3ece0;
+  box-shadow: 0 25px 120px #00171d80;
+}
+dialog::backdrop {
+  background: #071b21b0;
+  backdrop-filter: blur(7px);
+}
+.dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 19px;
+}
+.eyebrow {
+  font-size: 9px;
+  letter-spacing: 1.4px;
+  color: #adc2a8;
+  font-weight: 550;
+}
+#dialog-content h2 {
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: -0.7px;
+}
+#dialog-content h2 > span {
+  color: var(--coral);
+}
+.dialog-lead {
+  font-size: 13px;
+  color: #a4bfb1;
+  line-height: 1.65;
+  margin: 12px 0 25px;
+}
+.help-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 30px;
+}
+.help-grid article > .icon {
+  color: var(--coral);
+  margin-bottom: 8px;
+}
+.help-grid h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.help-grid p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #aac3b5;
+}
+.help-grid kbd {
+  font-size: 9px;
+  min-width: 17px;
+  height: 19px;
+  margin: 0 1px;
+  vertical-align: middle;
+}
+.dialog-note {
+  border-top: 1px solid var(--border);
+  margin-top: 26px;
+  padding-top: 19px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  color: #a9c3b2;
+  flex-wrap: wrap;
+}
+.dialog-note .icon {
+  width: 16px;
+  height: 16px;
+}
+.field-guide {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.field-guide article {
+  padding: 14px;
+  border-radius: 11px;
+  background: #ffffff03;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.field-guide article > img {
+  width: 135px;
+  height: 95px;
+  object-fit: contain;
+  background: radial-gradient(
+    ellipse,
+    color-mix(in srgb, var(--fish-color) 10%, transparent),
+    transparent 65%
+  );
+}
+.field-guide h3 {
+  font-size: 19px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+.field-guide p {
+  font-size: 11px;
+  color: #abc1b2;
+  line-height: 1.7;
+  margin: 5px 0 9px;
+}
+.guide-income {
+  font-size: 10px;
+  color: #c7d9b0;
+}
+.guide-income .icon {
+  width: 12px;
+  height: 12px;
+  margin-right: 3px;
+}
+.reset-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+.webgl-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 15px;
+  padding: 30px;
+  text-align: center;
+}
+.webgl-error p {
+  font-size: 13px;
+  color: #b0c9ba;
+}
+.aquarium:fullscreen {
+  background: #102f30;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.aquarium:fullscreen .tank-stage {
+  flex: 1;
+  height: auto;
+}
+.aquarium:fullscreen .aquarium-footer {
+  display: none;
+}
+.aquarium:fullscreen .tank-toolbar {
+  flex-shrink: 0;
+}
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.site-header {
+  height: 78px;
+}
+.intro {
+  padding: 24px 0 23px;
+}
+.tank-stage {
+  height: clamp(400px, calc(100vh - 330px), 720px);
+}
+.sidebar {
+  gap: 13px;
+}
+.reef-stats {
+  height: 62px;
+  padding: 13px 12px;
+}
+.shop-heading {
+  padding: 18px 20px 14px;
+}
+.shop-items {
+  padding: 5px 14px 8px;
+}
+.fish-card {
+  min-height: 73px;
+  padding: 9px 0;
+}
+.fish-portrait {
+  height: 53px;
+}
+.fish-portrait img {
+  height: 61px;
+  top: -7px;
+}
+.mission-card {
+  padding: 13px 17px 14px;
+}
+.mission-top {
+  margin-bottom: 8px;
+}
+.mission-description {
+  margin-top: 6px;
+}
+.mission-track {
+  margin-top: 6px;
+}
+.tank-toolbar {
+  padding: 13px 18px;
+}
+.aquarium-footer {
+  padding: 13px 4px;
+}
+@media (min-width: 1700px) {
+  .tank-stage {
+    height: 740px;
+  }
+  .intro {
+    padding: 40px 0;
+  }
+  .game-layout {
+    grid-template-columns: minmax(0, 1fr) 340px;
+  }
+  .fish-card {
+    min-height: 106px;
+  }
+  .shop-heading h2 > span {
+    margin-left: 120px;
+  }
+}
+@media (max-width: 1200px) {
+  .site-header {
+    padding: 0 28px;
+    gap: 42px;
+    height: 78px;
+  }
+  .page {
+    padding: 0 28px;
+  }
+  .game-layout {
+    grid-template-columns: minmax(0, 1fr) 285px;
+    gap: 18px;
+  }
+  h1 {
+    font-size: 33px;
+  }
+  .tank-stage {
+    height: clamp(440px, calc(100vh - 260px), 650px);
+  }
+  .tank-toolbar {
+    padding: 14px;
+    gap: 10px;
+  }
+  .action-button {
+    gap: 8px;
+    padding: 11px 10px;
+    font-size: 12px;
+  }
+  .action-button kbd {
+    margin-left: 0;
+  }
+  .action-button small {
+    margin-left: 4px;
+  }
+  .toolbar-right {
+    gap: 12px;
+  }
+  .movement-hint {
+    display: none;
+  }
+  .shop-heading h2 > span {
+    margin-left: 65px;
+  }
+  .shop-items {
+    padding: 7px 12px;
+  }
+  .fish-portrait {
+    width: 65px;
+  }
+  .fish-portrait img {
+    width: 87px;
+    left: -12px;
+  }
+  .fish-card {
+    gap: 8px;
+  }
+  .fish-info h3 {
+    font-size: 13px;
+  }
+  .buy-button {
+    min-width: 47px;
+    font-size: 10px;
+  }
+  .player-resources {
+    gap: 18px;
+  }
+}
+@media (max-width: 900px) {
+  .site-header {
+    padding: 0 22px;
+    gap: 32px;
+  }
+  .brand {
+    font-size: 23px;
+  }
+  .main-nav {
+    gap: 22px;
+  }
+  .page {
+    padding: 0 22px;
+  }
+  .game-layout {
+    grid-template-columns: minmax(0, 1fr) 252px;
+    gap: 16px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .keeper-badge {
+    display: none;
+  }
+  .tank-stage {
+    height: 500px;
+  }
+  .tank-status {
+    display: none;
+  }
+  .tank-top {
+    left: 18px;
+    top: 18px;
+    right: 16px;
+  }
+  .tank-toolbar {
+    padding: 12px;
+  }
+  .action-buttons {
+    gap: 7px;
+  }
+  .action-button {
+    padding: 10px 9px;
+  }
+  .action-button > .icon {
+    width: 18px;
+    height: 18px;
+  }
+  .action-button kbd {
+    display: none;
+  }
+  .pause-button {
+    width: 32px;
+    height: 32px;
+  }
+  .fish-portrait {
+    width: 57px;
+  }
+  .fish-portrait img {
+    width: 77px;
+    left: -10px;
+  }
+  .shop-heading {
+    padding: 20px 16px 16px;
+  }
+  .shop-heading h2 {
+    font-size: 20px;
+  }
+  .shop-heading h2 > span {
+    margin-left: 47px;
+  }
+  .shop-tabs {
+    padding: 0 14px;
+    gap: 10px;
+  }
+  .shop-tab {
+    font-size: 11px;
+  }
+  .shop-items {
+    padding: 6px 10px;
+  }
+  .fish-card {
+    min-height: 90px;
+    gap: 6px;
+  }
+  .fish-info h3 {
+    font-size: 12px;
+  }
+  .buy-button {
+    min-width: 41px;
+    gap: 3px;
+    font-size: 10px;
+  }
+  .buy-button .mini-pearl {
+    width: 7px;
+    height: 7px;
+  }
+  .mission-card {
+    padding: 15px;
+  }
+  .overline {
+    font-size: 7px;
+  }
+  .mission-card h3 {
+    font-size: 15px;
+  }
+  .tutorial-note {
+    display: none;
+  }
+  .stat-item {
+    gap: 6px;
+  }
+  .stat-symbol {
+    width: 27px;
+    height: 27px;
+  }
+  .stat-item strong {
+    font-size: 20px;
+  }
+  .stat-item strong span {
+    font-size: 11px;
+  }
+  .upgrade-portrait {
+    width: 32px;
+  }
+  .upgrade-card .fish-info h3 {
+    font-size: 11px;
+  }
+  .fish-income {
+    font-size: 9px;
+  }
+  .aquarium-footer > span {
+    display: none;
+  }
+  .aquarium-footer {
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 700px) {
+  .site-header {
+    height: 72px;
+    padding: 0 18px;
+    gap: 25px;
+  }
+  .brand {
+    font-size: 22px;
+  }
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 11px;
+  }
+  .brand-mark .icon {
+    width: 24px;
+    height: 24px;
+  }
+  .main-nav {
+    display: none;
+  }
+  .header-actions {
+    gap: 12px;
+  }
+  .help-button {
+    font-size: 11px;
+    gap: 6px;
+  }
+  .header-divider {
+    display: none;
+  }
+  .page {
+    padding: 0 16px;
+  }
+  .intro {
+    padding: 23px 2px 21px;
+    gap: 10px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .pearl-badge {
+    min-width: auto;
+    padding: 9px 12px;
+    border-radius: 10px;
+  }
+  .pearl-orb {
+    width: 18px;
+    height: 18px;
+  }
+  .pearl-badge strong {
+    font-size: 18px;
+  }
+  .game-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .tank-stage {
+    height: 480px;
+  }
+  .tank-top {
+    left: 17px;
+    top: 19px;
+  }
+  .tank-location h2 {
+    font-size: 18px;
+  }
+  .tank-location {
+    gap: 8px;
+  }
+  .tank-status {
+    display: flex;
+    margin-left: 5px;
+    font-size: 9px;
+    padding: 5px 7px;
+  }
+  .view-actions {
+    gap: 4px;
+  }
+  .view-actions button {
+    width: 29px;
+    height: 29px;
+  }
+  .tank-toolbar {
+    padding: 14px 13px;
+  }
+  .action-button {
+    padding: 11px 12px;
+    font-size: 13px;
+  }
+  .action-button kbd {
+    display: flex;
+    font-size: 8px;
+    height: 20px;
+  }
+  .action-buttons {
+    gap: 9px;
+  }
+  .tank-bottom {
+    left: 18px;
+    bottom: 19px;
+  }
+  .sub-status {
+    padding: 8px 10px;
+  }
+  .aquarium-footer {
+    padding: 14px 2px;
+  }
+  .aquarium-footer > span {
+    display: flex;
+    font-size: 9px;
+  }
+  .aquarium-footer button {
+    font-size: 10px;
+  }
+  .sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  .reef-stats {
+    grid-column: 1;
+    height: 79px;
+    padding: 17px 9px;
+  }
+  .stat-item {
+    gap: 6px;
+  }
+  .stat-symbol {
+    width: 27px;
+  }
+  .stat-item strong {
+    font-size: 20px;
+  }
+  .mission-card {
+    grid-column: 2;
+    grid-row: 1;
+    padding: 12px;
+    margin-top: 0;
+  }
+  .mission-top {
+    margin-bottom: 8px;
+    gap: 5px;
+  }
+  .overline {
+    font-size: 6px;
+    letter-spacing: 0.7px;
+  }
+  .mission-reward {
+    font-size: 9px;
+  }
+  .mission-card h3 {
+    font-size: 12px;
+  }
+  .mission-description {
+    margin-top: 5px;
+  }
+  .mission-description strong {
+    font-size: 9px;
+  }
+  .mission-track {
+    margin-top: 5px;
+    height: 3px;
+  }
+  .shop {
+    grid-column: 1 / -1;
+  }
+  .shop-heading {
+    padding: 19px 17px 16px;
+  }
+  .shop-heading h2 {
+    font-size: 22px;
+  }
+  .shop-heading h2 > span {
+    float: right;
+    margin-left: 0;
+    position: absolute;
+    right: 34px;
+  }
+  .shop-tabs {
+    padding: 0 17px;
+    gap: 25px;
+    max-width: 300px;
+    border-bottom: 0;
+  }
+  .shop-tab {
+    font-size: 12px;
+  }
+  .shop-items {
+    border-top: 1px solid var(--border);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 18px;
+    padding: 8px 16px;
+  }
+  .fish-card {
+    min-height: 96px;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .fish-card:nth-child(3) {
+    border-bottom: 0;
+  }
+  .fish-portrait {
+    width: 61px;
+    height: 55px;
+  }
+  .fish-portrait img {
+    width: 83px;
+    left: -12px;
+  }
+  .fish-info {
+    min-width: 70px;
+  }
+  .fish-info h3 {
+    font-size: 13px;
+  }
+  .buy-button {
+    position: absolute;
+    bottom: 11px;
+    right: 0;
+    min-width: 45px;
+    height: 26px;
+  }
+  .fish-card .fish-info {
+    align-self: flex-start;
+    margin-top: 12px;
+  }
+  .fish-card .fish-portrait {
+    margin-top: -8px;
+  }
+  .upgrade-card {
+    min-height: 122px;
+    align-items: flex-start;
+    padding-top: 17px;
+  }
+  .upgrade-card .fish-info {
+    margin-top: 0;
+  }
+  .upgrade-card .buy-button {
+    position: absolute;
+    bottom: 13px;
+  }
+  .upgrade-card .fish-info h3 {
+    font-size: 12px;
+  }
+  .page-footer {
+    padding: 20px 0 22px;
+  }
+  .wave-warning {
+    top: 66px;
+    font-size: 10px;
+    max-width: 95%;
+    padding: 10px 12px;
+  }
+  .wave-warning strong {
+    font-size: 9px;
+  }
+  .help-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  dialog {
+    padding: 23px;
+  }
+  .field-guide article {
+    gap: 13px;
+    padding: 12px;
+  }
+  .field-guide article > img {
+    width: 90px;
+    height: 75px;
+  }
+  #dialog-content h2 {
+    font-size: 27px;
+  }
+  .dialog-lead {
+    font-size: 12px;
+  }
+  .field-guide .eyebrow {
+    font-size: 7px;
+  }
+  .field-guide h3 {
+    font-size: 17px;
+  }
+  .field-guide p {
+    font-size: 10px;
+  }
+  .guide-income {
+    font-size: 9px;
+  }
+}
+@media (max-width: 420px) {
+  h1 {
+    font-size: 26px;
+  }
+  .tank-stage {
+    height: 440px;
+  }
+  .tank-status {
+    display: none;
+  }
+  .action-button {
+    padding: 11px 9px;
+    gap: 7px;
+    font-size: 12px;
+  }
+  .action-button kbd {
+    display: none;
+  }
+  .tank-toolbar {
+    padding: 13px 12px;
+  }
+  .sidebar {
+    gap: 11px;
+  }
+  .stat-item {
+    gap: 3px;
+  }
+  .stat-symbol {
+    width: 23px;
+  }
+  .stat-symbol .icon {
+    width: 17px;
+    height: 17px;
+  }
+  .stat-item strong {
+    font-size: 19px;
+  }
+  .mission-top .overline {
+    font-size: 5.5px;
+  }
+  .mission-reward {
+    font-size: 8px;
+  }
+  .fish-portrait {
+    width: 48px;
+  }
+  .fish-portrait img {
+    width: 71px;
+    left: -12px;
+  }
+  .fish-info h3 {
+    font-size: 12px;
+  }
+  .shop-items {
+    gap: 0 12px;
+    padding: 8px 12px;
+  }
+  .fish-card .fish-info {
+    margin-top: 9px;
+  }
+  .fish-card .fish-portrait {
+    margin-top: -12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.control-list {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.control-list > div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.control-list .icon {
+  width: 18px;
+  height: 18px;
+  color: var(--coral);
+}
+.control-list strong {
+  margin-left: auto;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 450;
+  color: #b5cbb8;
+}
+.control-list kbd {
+  font-size: 10px;
+}
+.pause-overlay .primary-button,
+.gameover-overlay .primary-button {
+  margin-top: 24px;
+}
+.gameover-overlay p {
+  display: none;
+}
+.field-guide {
+  margin-top: 22px;
+}
+.field-guide h3 {
+  margin-bottom: 9px;
+}
+
+.view-actions .camera-mode {
+  width: auto;
+  padding: 0 10px;
+  gap: 7px;
+  font-size: 10px;
+}
+.pilot-reticle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #d4e6ca75;
+  pointer-events: none;
+  z-index: 2;
+}
+.pilot-reticle .icon {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1;
+}
+.cockpit-frame {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: none;
+  z-index: 1;
+  overflow: hidden;
+}
+.cockpit .cockpit-frame {
+  display: block;
+}
+.cockpit-rim {
+  position: absolute;
+  inset: 8px;
+  border-radius: 42% / 47%;
+  border: 14px solid #6b7659;
+  box-shadow:
+    inset 0 0 0 3px #c7c89166,
+    inset 0 0 0 7px #344940,
+    inset 0 0 18px 10px #152e3160,
+    0 0 0 100px #183331,
+    0 0 0 3px #82906c;
+}
+.cockpit-rim:after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border: 3px dashed #293d35;
+  border-radius: inherit;
+  opacity: 0.65;
+}
+.cockpit-dashboard {
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  padding: 15px 26px 22px;
+  background: linear-gradient(#485c45, #263d32);
+  border: 2px solid #8c947166;
+  border-radius: 26px 26px 0 0;
+  box-shadow:
+    0 -8px 25px #102a3040,
+    inset 0 2px 0 #a9b38c33;
+}
+.cockpit-gauge {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #17302e 0 52%, transparent 53%),
+    repeating-conic-gradient(
+      from -110deg,
+      #aeb58b 0deg 2deg,
+      #203a32 2deg 28deg
+    );
+  border: 3px solid #adad7a;
+  outline: 2px solid #27392e;
+  box-shadow: inset 0 0 8px #061d20;
+}
+.cockpit-gauge:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  top: calc(50% - 2.5px);
+  left: calc(50% - 2.5px);
+  background: #dfcca0;
+  border-radius: 50%;
+}
+.cockpit-gauge i {
+  position: absolute;
+  width: 2px;
+  height: 16px;
+  left: calc(50% - 1px);
+  bottom: 50%;
+  background: #edba93;
+  transform-origin: bottom center;
+  transform: rotate(var(--gauge-angle, -100deg));
+  transition: transform 0.25s;
+  border-radius: 2px;
+}
+.cockpit-gauge .icon {
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: calc(50% - 4.5px);
+  bottom: 4px;
+  color: #a9b28a;
+}
+.depth-gauge {
+  --gauge-angle: var(--depth-angle);
+}
+.hull-gauge {
+  --gauge-angle: var(--hull-angle);
+}
+.speed-gauge {
+  --gauge-angle: var(--speed-angle);
+}
+.tank-top,
+.tank-bottom,
+.wave-warning,
+.tutorial-note {
+  z-index: 3;
+}
+.floating-labels {
+  z-index: 2;
+}
+.cockpit .tutorial-note {
+  display: none;
+}
+@media (max-width: 700px) {
+  .view-actions .camera-mode {
+    padding: 0 7px;
+    gap: 5px;
+    font-size: 9px;
+  }
+  .cockpit-rim {
+    inset: 6px;
+    border-width: 10px;
+    border-radius: 38% / 38%;
+  }
+  .cockpit-dashboard {
+    gap: 13px;
+    padding: 12px 20px 22px;
+  }
+  .cockpit-gauge {
+    width: 43px;
+    height: 43px;
+  }
+  .tank-status {
+    display: none;
+  }
+}
